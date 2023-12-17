@@ -11,7 +11,10 @@ import loa from "../../logoImage/loa.png";
 
 export default function Footer() {
   return (
-    <div className="py-10 mt-10" style={{ backgroundColor: "#212121" }}>
+    <div
+      className="py-10 mt-10"
+      style={{ backgroundColor: "#212121", width: "100%" }}
+    >
       <div className="grid grid-cols-3 container py-5 gap-10 text-white  font-bold">
         <h2>X Cinema</h2>
         <h2>ĐỐI TÁC</h2>

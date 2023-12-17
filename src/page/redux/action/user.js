@@ -1,6 +1,7 @@
 import { message } from "antd";
 import https from "../../../service/config";
-import { SET_USER } from "../constant/constant";
+
+import { setUser } from "../reducer/reducer";
 
 export const loginAction = (values, navigate) => {
   return (dispatch) => {
@@ -9,10 +10,8 @@ export const loginAction = (values, navigate) => {
       .then((result) => {
         const jsonData = JSON.stringify(result.data.content);
         localStorage.setItem("user", jsonData);
-        dispatch({
-          type: SET_USER,
-          payload: result.data.content,
-        });
+        //truyền vào payload là result.data.content, lấy ra thì action.payload
+        dispatch(setUser(result.data.content));
         message.success("Login successfully by redux thunk");
         navigate("/");
       })

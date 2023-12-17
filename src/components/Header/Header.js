@@ -9,7 +9,7 @@ export default function Header() {
     if (user) {
       return (
         <div>
-          <span className="mx-5">{user.hoTen}</span>
+          <span className="mx-5 italic">Welcome {user.hoTen},</span>
           <button
             className="btn-theme"
             onClick={() => {
@@ -37,17 +37,14 @@ export default function Header() {
     }
   };
   return (
-    <div
-      className="flex justify-between container py-5 items-center border-2 border-blue-200
-    rounded my-2"
-    >
+    <div className="flex justify-between container py-5 items-center  my-2">
       <span
         className="text-3xl text-red-500 cursor-pointer"
         onClick={() => {
           navigate("/");
         }}
       >
-        LoveUKhanh
+        Home
       </span>
       {renderBtn()}
     </div>

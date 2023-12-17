@@ -21,9 +21,9 @@ export default function ItemMovie({ item }) {
         />
         <NavLink
           to={`detail/${maPhim}`}
-          className="rounded border border-blue-300 mt-4 px-5 py-2 inline-block text-lg"
+          className="btn-theme mt-2 inline-block text-lg nav-link"
         >
-          Xem chi tiết
+          <span>Xem chi tiết</span>
         </NavLink>
       </Card>
     </div>

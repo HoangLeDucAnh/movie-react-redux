@@ -55,7 +55,7 @@ export default function TabMovie() {
     };
   });
   return (
-    <div className="container mt-5">
+    <div className="container mt-5 py-10" style={{ height: 700 }}>
       <Tabs
         defaultActiveKey="1"
         items={items}

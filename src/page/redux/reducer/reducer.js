@@ -1,17 +1,18 @@
-import { SET_USER } from "../constant/constant";
-
+import { createSlice } from "@reduxjs/toolkit";
 // khởi tạo giá trị default cho state
 const initialState = {
   user: JSON.parse(localStorage.getItem("user")),
 };
 //state được gán bằng initialState
-export const userReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case SET_USER: {
+//không cần phải return state mới như redux cũ
+const userReducer = createSlice({
+  name: "userReducer",
+  initialState,
+  reducers: {
+    setUser: (state, action) => {
       state.user = action.payload;
-      return { ...state };
-    }
-    default:
-      return state;
-  }
-};
+    },
+  },
+});
+export default userReducer.reducer;
+export let { setUser } = userReducer.actions;

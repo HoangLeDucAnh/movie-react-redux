@@ -1,30 +1,11 @@
 import React from "react";
-import { Button, Form, Input, message } from "antd";
-import https from "../../service/config";
+import { Button, Form, Input } from "antd";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { SET_USER } from "../redux/constant/constant";
 import { loginAction } from "../redux/action/user";
 const App = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const onFinishV1 = (values) => {
-    https
-      .post("api/QuanLyNguoiDung/DangNhap", values)
-      .then((res) => {
-        const jsonData = JSON.stringify(res.data.content);
-        localStorage.setItem("user", jsonData);
-        dispatch({
-          type: SET_USER,
-          payload: res.data.content,
-        });
-        navigate("/");
-        message.success("Login successfully");
-      })
-      .catch((err) => {
-        message.error("Login failed");
-      });
-  };
   const onFinish = (values) => {
     dispatch(loginAction(values, navigate));
   };
@@ -83,7 +64,7 @@ const App = () => {
         }}
       >
         <Button
-          className="bg-sky-500 text-white hover:bg-black hover:border-transparent"
+          className="bg-red-400 text-white hover:bg-red-300 hover:border-transparent"
           htmlType="submit"
         >
           Submit

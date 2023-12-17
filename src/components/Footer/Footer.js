@@ -11,10 +11,7 @@ import loa from "../../logoImage/loa.png";
 
 export default function Footer() {
   return (
-    <div
-      className="py-10 mt-10"
-      style={{ backgroundColor: "#212121", width: "100%" }}
-    >
+    <div className="py-10 mt-10" style={{ backgroundColor: "#212121" }}>
       <div className="grid grid-cols-3 container py-5 gap-10 text-white  font-bold">
         <h2>X Cinema</h2>
         <h2>ĐỐI TÁC</h2>
@@ -76,7 +73,7 @@ export default function Footer() {
       </div>
       <div className="container mt-10 border-t-2 gridCustom px-5 gap-10">
         <div className="flex items-center justify-center mt-10">
-          <img src={loa} alt="" style={{ width: "50px", height: "30px" }} />
+          <img src={loa} alt="" style={{ width: "220px", height: "170px" }} />
         </div>
         <div className="mt-10 text-white text-center">
           <h6 className="py-5">
@@ -90,11 +87,11 @@ export default function Footer() {
           </h6>
           <h6>Số Điện Thoại (Hotline): 1900 205201276201</h6>
         </div>
-        <div className="mt-10 flex items-center">
+        <div className="mt-10 flex items-center justify-center">
           <img
             src="https://demo1.cybersoft.edu.vn/static/media/daThongBao-logo.cb85045e.png"
             alt=""
-            style={{ width: "100px" }}
+            style={{ width: "200px" }}
           />
         </div>
       </div>

@@ -30,5 +30,5 @@
 }
 .gridCustom {
   display: grid;
-  grid-template-columns: 200px 980px 200px;
+  grid-template-columns: 1fr 2fr 1fr;
 }
